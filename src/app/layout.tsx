@@ -16,13 +16,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-TETB179Y91"></script>
+        <script dangerouslySetInnerHTML={{ __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-TETB179Y91');
+        ` }} />
         <title>SwiftResume.io - Free, Modern Resume Builder</title>
         <meta name="description" content="SwiftResume.io is a free, open-source resume builder and parser. Create a stunning, professional resume in minutes." />
         <meta name="keywords" content="resume, builder, parser, free, open-source, ATS, job, CV" />
         <meta name="author" content="SwiftResume.io" />
         <meta property="og:title" content="SwiftResume.io" />
         <meta property="og:description" content="Create a stunning resume for free with SwiftResume.io" />
-        <meta property="og:url" content="https://swiftresume.io.vercel.app/" />
+        <meta property="og:url" content="https://swiftresumeio.vercel.app/" />
         <meta property="og:type" content="website" />
       </head>
       <body>
