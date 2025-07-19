@@ -50,18 +50,6 @@ export default function Home() {
         </div>
         <script dangerouslySetInnerHTML={{ __html: "(adsbygoogle = window.adsbygoogle || []).push({});" }} />
       </section>
-      {/* AMP Ad Example */}
-      <section className="mt-8 max-w-2xl mx-auto flex justify-center">
-        <amp-ad width="100vw" height="320"
-          type="adsense"
-          data-ad-client="ca-pub-9767462267523818"
-          data-ad-slot="9978320929"
-          data-auto-format="rspv"
-          data-full-width=""
-        >
-          <div overflow=""></div>
-        </amp-ad>
-      </section>
       <section className="mt-8 max-w-2xl mx-auto flex justify-center">
         <a href="https://coff.ee/swiftresumeio" target="_blank" rel="noopener noreferrer">
           <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style={{ height: 60, width: 217 }} />
