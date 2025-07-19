@@ -49,6 +49,11 @@ export default function Home() {
         </div>
         <script dangerouslySetInnerHTML={{ __html: "(adsbygoogle = window.adsbygoogle || []).push({});" }} />
       </section>
+      <section className="mt-8 max-w-2xl mx-auto flex justify-center">
+        <a href="https://coff.ee/swiftresumeio" target="_blank" rel="noopener noreferrer">
+          <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style={{ height: 60, width: 217 }} />
+        </a>
+      </section>
     </main>
   );
 }
