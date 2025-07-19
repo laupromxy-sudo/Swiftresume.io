@@ -15,6 +15,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <title>SwiftResume.io - Free, Modern Resume Builder</title>
+        <meta name="description" content="SwiftResume.io is a free, open-source resume builder and parser. Create a stunning, professional resume in minutes." />
+        <meta name="keywords" content="resume, builder, parser, free, open-source, ATS, job, CV" />
+        <meta name="author" content="SwiftResume.io" />
+        <meta property="og:title" content="SwiftResume.io" />
+        <meta property="og:description" content="Create a stunning resume for free with SwiftResume.io" />
+        <meta property="og:url" content="https://swiftresume.io.vercel.app/" />
+        <meta property="og:type" content="website" />
+      </head>
       <body>
         <TopNavBar />
         {children}
