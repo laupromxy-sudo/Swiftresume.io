@@ -40,14 +40,27 @@ export default function Home() {
       <section className="mt-16 max-w-2xl mx-auto">
         <h2 className="text-2xl font-bold mb-4">Support SwiftResume.io</h2>
         <div style={{ display: 'flex', justifyContent: 'center' }}>
+          {/* Standard AdSense ad unit */}
           <ins className="adsbygoogle"
-            style={{ display: 'block', width: '100%', minHeight: 90 }}
+            style={{ display: 'block' }}
             data-ad-client="ca-pub-9767462267523818"
-            data-ad-slot="1234567890"
+            data-ad-slot="9978320929"
             data-ad-format="auto"
             data-full-width-responsive="true"></ins>
         </div>
         <script dangerouslySetInnerHTML={{ __html: "(adsbygoogle = window.adsbygoogle || []).push({});" }} />
+      </section>
+      {/* AMP Ad Example */}
+      <section className="mt-8 max-w-2xl mx-auto flex justify-center">
+        <amp-ad width="100vw" height="320"
+          type="adsense"
+          data-ad-client="ca-pub-9767462267523818"
+          data-ad-slot="9978320929"
+          data-auto-format="rspv"
+          data-full-width=""
+        >
+          <div overflow=""></div>
+        </amp-ad>
       </section>
       <section className="mt-8 max-w-2xl mx-auto flex justify-center">
         <a href="https://coff.ee/swiftresumeio" target="_blank" rel="noopener noreferrer">
