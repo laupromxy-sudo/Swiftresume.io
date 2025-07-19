@@ -43,6 +43,8 @@ export default function RootLayout({
           gtag('js', new Date());
           gtag('config', 'G-TETB179Y91');
         ` }} />
+        {/* Google AdSense */}
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9767462267523818" crossOrigin="anonymous"></script>
         <title>Free Resume Builder & Cover Letter Generator | SwiftResume.io</title>
         <meta name="description" content="Create a professional resume or cover letter for free with SwiftResume.io. ATS-friendly, modern, and easy to use. Download free resume templates and cover letter examples." />
         <meta name="keywords" content="resume builder, cover letter builder, free resume template, resume generator, cover letter template, ATS resume, online resume, job application, SwiftResume.io" />

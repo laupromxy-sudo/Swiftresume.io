@@ -37,6 +37,18 @@ export default function Home() {
         <blockquote className="border-l-4 pl-4 italic mb-4">“I was invited to interview at top tech companies thanks to its slick yet professional resume design.”<br /><span className="font-semibold">– Santi, Software Engineer</span></blockquote>
         <blockquote className="border-l-4 pl-4 italic">“Creating a professional resume on SwiftResume.io is so smooth and easy! It saves me so much time and headache.”<br /><span className="font-semibold">– Vivian, College Student</span></blockquote>
       </section>
+      <section className="mt-16 max-w-2xl mx-auto">
+        <h2 className="text-2xl font-bold mb-4">Support SwiftResume.io</h2>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <ins className="adsbygoogle"
+            style={{ display: 'block', width: '100%', minHeight: 90 }}
+            data-ad-client="ca-pub-9767462267523818"
+            data-ad-slot="1234567890"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        </div>
+        <script dangerouslySetInnerHTML={{ __html: "(adsbygoogle = window.adsbygoogle || []).push({});" }} />
+      </section>
     </main>
   );
 }
