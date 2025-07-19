@@ -56,16 +56,16 @@ SwiftResume.io is created with the NextJS web framework and follows its project 
 
 ### Method 1: npm
 
-1. Download the repo `git clone https://github.com/xitanggg/open-resume.git`
-2. Change the directory `cd open-resume`
+1. Download the repo `git clone https://github.com/laupromxy-sudo/Swiftresume.io.git`
+2. Change the directory `cd Swiftresume.io`
 3. Install the dependency `npm install`
 4. Start a development server `npm run dev`
 5. Open your browser and visit [http://localhost:3000](http://localhost:3000) to see SwiftResume.io live
 
 ### Method 2: Docker
 
-1. Download the repo `git clone https://github.com/xitanggg/open-resume.git`
-2. Change the directory `cd open-resume`
+1. Download the repo `git clone https://github.com/laupromxy-sudo/Swiftresume.io.git`
+2. Change the directory `cd Swiftresume.io`
 3. Build the container `docker build -t swiftresume.io .`
 4. Start the container `docker run -p 3000:3000 swiftresume.io`
 5. Open your browser and visit [http://localhost:3000](http://localhost:3000) to see SwiftResume.io live
