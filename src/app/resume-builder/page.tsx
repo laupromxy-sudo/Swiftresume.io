@@ -87,7 +87,7 @@ function ThemeCustomizer({
   );
 }
 
-export default function ResumeBuilderPage(props) {
+export default function ResumeBuilderPage() {
   const [customizerOpen, setCustomizerOpen] = useState(false);
   const [theme, setTheme] = useState({
     pageColor: "#f8fafc",
