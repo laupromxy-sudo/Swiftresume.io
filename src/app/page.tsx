@@ -1,6 +1,6 @@
 import { Hero } from "home/Hero";
 import { Steps } from "home/Steps";
-import { Features } from "home/Features";
+import Features from "home/Features";
 import { Testimonials } from "home/Testimonials";
 import { QuestionsAndAnswers } from "home/QuestionsAndAnswers";
 
