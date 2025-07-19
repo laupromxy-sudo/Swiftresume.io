@@ -1,6 +1,7 @@
 import "globals.css";
 import { TopNavBar } from "components/TopNavBar";
 import { Analytics } from "@vercel/analytics/react";
+import Script from "next/script";
 
 export const metadata = {
   title: "SwiftResume.io - Outstanding Resume Builder and Parser",
@@ -43,9 +44,12 @@ export default function RootLayout({
           gtag('js', new Date());
           gtag('config', 'G-TETB179Y91');
         ` }} />
-        {/* Google AdSense */}
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9767462267523818"
-  crossOrigin="anonymous"></script>
+        {/* Google AdSense with Next.js Script */}
+        <Script
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9767462267523818"
+          strategy="lazyOnload"
+          crossOrigin="anonymous"
+        />
         <title>Free Resume Builder & Cover Letter Generator | SwiftResume.io</title>
         <meta name="description" content="Create a professional resume or cover letter for free with SwiftResume.io. ATS-friendly, modern, and easy to use. Download free resume templates and cover letter examples." />
         <meta name="keywords" content="resume builder, cover letter builder, free resume template, resume generator, cover letter template, ATS resume, online resume, job application, SwiftResume.io" />
