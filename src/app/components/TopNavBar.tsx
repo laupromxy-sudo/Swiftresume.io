@@ -13,45 +13,44 @@ export const TopNavBar = () => {
     <header
       aria-label="Site Header"
       className={cx(
-        "flex h-[var(--top-nav-bar-height)] items-center border-b-2 border-gray-100 px-3 lg:px-12",
-        isHomePage && "bg-dot"
+        "flex h-[var(--top-nav-bar-height)] items-center px-3 lg:px-12 transition-all duration-300",
+        isHomePage
+          ? "bg-gradient-to-r from-[color:var(--theme-blue)] to-[color:var(--theme-purple)] border-b-0 shadow-lg"
+          : pathName.startsWith("/resume-builder") || pathName.startsWith("/resume-parser")
+            ? "bg-[#6C38FF] border-b-0 shadow-lg"
+            : "border-b-2 border-gray-100 bg-white"
       )}
     >
       <div className="flex h-10 w-full items-center justify-between">
         <Link href="/">
-          <span className="sr-only">OpenResume</span>
-          <Image
-            src={logoSrc}
-            alt="OpenResume Logo"
-            className="h-8 w-full"
-            priority
-          />
+          <span className="sr-only">SwiftResume.io</span>
+          <span
+            className="text-2xl font-extrabold tracking-tight select-none text-white"
+            style={{
+              color: '#fff',
+              textShadow: '0 2px 8px rgba(0,0,0,0.10)'
+            }}
+          >
+            SwiftResume.io
+          </span>
         </Link>
         <nav
           aria-label="Site Nav Bar"
           className="flex items-center gap-2 text-sm font-medium"
         >
           {[
+            ["/", "Home"],
             ["/resume-builder", "Builder"],
             ["/resume-parser", "Parser"],
           ].map(([href, text]) => (
             <Link
               key={text}
-              className="rounded-md px-1.5 py-2 text-gray-500 hover:bg-gray-100 focus-visible:bg-gray-100 lg:px-4"
+              className="rounded-md px-1.5 py-2 text-white hover:bg-white/10 focus-visible:bg-white/10 lg:px-4 transition-colors duration-150"
               href={href}
             >
               {text}
             </Link>
           ))}
-          <div className="ml-1 mt-1">
-            <iframe
-              src="https://ghbtns.com/github-btn.html?user=xitanggg&repo=open-resume&type=star&count=true"
-              width="100"
-              height="20"
-              className="overflow-hidden border-none"
-              title="GitHub"
-            />
-          </div>
         </nav>
       </div>
     </header>

@@ -3,9 +3,9 @@ import { TopNavBar } from "components/TopNavBar";
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
-  title: "OpenResume - Free Open-source Resume Builder and Parser",
+  title: "SwiftResume.io - Outstanding Resume Builder and Parser",
   description:
-    "OpenResume is a free, open-source, and powerful resume builder that allows anyone to create a modern professional resume in 3 simple steps. For those who have an existing resume, OpenResume also provides a resume parser to help test and confirm its ATS readability.",
+    "SwiftResume.io is a vibrant, modern, and powerful resume builder that allows anyone to create a professional resume in minutes. Import, build, and test your resume with ease.",
 };
 
 export default function RootLayout({

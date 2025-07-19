@@ -5,13 +5,29 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-primary outline-theme-purple inline-block rounded-full px-6 py-2 font-semibold shadow-sm;
+    @apply inline-block rounded-full px-7 py-2.5 font-bold shadow-xl text-white transition-all duration-200;
+    background: var(--theme-gradient);
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 24px 0 rgba(108,56,255,0.15), 0 1.5px 6px 0 rgba(0,151,246,0.10);
+    font-size: 1.15rem;
+    letter-spacing: 0.01em;
+  }
+  .btn-primary:hover, .btn-primary:focus {
+    filter: brightness(1.08) saturate(1.2);
+    box-shadow: 0 8px 32px 0 rgba(108,56,255,0.18), 0 2px 8px 0 rgba(0,151,246,0.13);
+    transform: translateY(-2px) scale(1.04);
   }
   .text-primary {
-    @apply bg-gradient-to-r from-[color:var(--theme-purple)] to-[color:var(--theme-blue)] bg-clip-text text-transparent !important;
+    background: var(--theme-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent !important;
   }
   .bg-primary {
-    @apply bg-gradient-to-r from-[color:var(--theme-purple)] to-[color:var(--theme-blue)] text-white;
+    background: var(--theme-gradient);
+    color: #fff;
   }
   .outline-theme-purple {
     @apply hover:opacity-80 hover:outline-[color:var(--theme-purple)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--theme-purple)];
@@ -25,10 +41,48 @@
 }
 
 :root {
-  --theme-purple: #5d52d9;
-  --theme-blue: #4fc5eb;
-  /* Keep the below variable names in sync with CSS_VARIABLES in globals-css.ts */
+  --theme-purple: #6C38FF;
+  --theme-blue: #0097F6;
+  --theme-gradient: linear-gradient(90deg, #0097F6 0%, #6C38FF 100%);
+  --theme-accent: #00E0CA;
+  --theme-bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+  --theme-glass-bg: rgba(255,255,255,0.75);
+  --theme-glass-border: rgba(108,56,255,0.12);
+  --theme-shadow: 0 8px 32px 0 rgba(60,60,120,0.10), 0 1.5px 6px 0 rgba(0,151,246,0.10);
+  --theme-radius: 1.5rem;
+  --theme-blur: 16px;
   --top-nav-bar-height: 3.5rem;
   --resume-control-bar-height: 3rem;
   --resume-padding: 1.5rem;
+}
+
+body {
+  font-family: 'Lato', 'Montserrat', 'Inter', Arial, sans-serif;
+  background: var(--theme-bg-gradient);
+  min-height: 100vh;
+  color: #18181B;
+}
+
+.glass-card {
+  background: var(--theme-glass-bg);
+  border-radius: var(--theme-radius);
+  box-shadow: var(--theme-shadow);
+  border: 1.5px solid var(--theme-glass-border);
+  backdrop-filter: blur(var(--theme-blur));
+  -webkit-backdrop-filter: blur(var(--theme-blur));
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', 'Lato', Arial, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #f3f4f6;
+}
+::-webkit-scrollbar-thumb {
+  background: #e0e7ff;
+  border-radius: 8px;
 }

@@ -28,7 +28,7 @@ const RESUME_EXAMPLES = [
     fileUrl: "resume-example/openresume-resume.pdf",
     description: (
       <span>
-        Created with OpenResume resume builder -{" "}
+        Created with SwiftResume.io resume builder -{" "}
         <Link href="/resume-builder">Link</Link>
       </span>
     ),
@@ -62,14 +62,14 @@ export default function ResumeParser() {
           </section>
           <FlexboxSpacer maxWidth={45} className="hidden md:block" />
         </div>
-        <div className="flex px-6 text-gray-900 md:col-span-3 md:h-[calc(100vh-var(--top-nav-bar-height))] md:overflow-y-scroll">
+        <div className="flex px-6 text-blue-600 md:col-span-3 md:h-[calc(100vh-var(--top-nav-bar-height))] md:overflow-y-scroll">
           <FlexboxSpacer maxWidth={45} className="hidden md:block" />
           <section className="max-w-[600px] grow">
-            <Heading className="text-primary !mt-4">
+            <Heading className="!mt-4 text-white bg-[#6C38FF] rounded-xl px-6 py-3 shadow-lg inline-block">
               Resume Parser Playground
             </Heading>
-            <Paragraph smallMarginTop={true}>
-              This playground showcases the OpenResume resume parser and its
+            <Paragraph smallMarginTop={true} className="text-blue-600">
+              This playground showcases the SwiftResume.io resume parser and its
               ability to parse information from a resume PDF. Click around the
               PDF examples below to observe different parsing results.
             </Paragraph>
@@ -97,7 +97,7 @@ export default function ResumeParser() {
                 </article>
               ))}
             </div>
-            <Paragraph>
+            <Paragraph className="text-blue-600">
               You can also{" "}
               <span className="font-semibold">add your resume below</span> to
               access how well your resume would be parsed by similar Application
@@ -114,7 +114,7 @@ export default function ResumeParser() {
                 playgroundView={true}
               />
             </div>
-            <Heading level={2} className="!mt-[1.2em]">
+            <Heading level={2} className="!mt-[1.2em] text-blue-700">
               Resume Parsing Results
             </Heading>
             <ResumeTable resume={resume} />
