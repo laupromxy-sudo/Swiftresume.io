@@ -24,12 +24,12 @@ export default function RootLayout({
           gtag('js', new Date());
           gtag('config', 'G-TETB179Y91');
         ` }} />
-        <title>SwiftResume.io - Free, Modern Resume Builder</title>
-        <meta name="description" content="SwiftResume.io is a free, open-source resume builder and parser. Create a stunning, professional resume in minutes." />
-        <meta name="keywords" content="resume, builder, parser, free, open-source, ATS, job, CV" />
+        <title>Free Resume Builder & Cover Letter Generator | SwiftResume.io</title>
+        <meta name="description" content="Create a professional resume or cover letter for free with SwiftResume.io. ATS-friendly, modern, and easy to use. Download free resume templates and cover letter examples." />
+        <meta name="keywords" content="resume builder, cover letter builder, free resume template, resume generator, cover letter template, ATS resume, online resume, job application, SwiftResume.io" />
         <meta name="author" content="SwiftResume.io" />
-        <meta property="og:title" content="SwiftResume.io" />
-        <meta property="og:description" content="Create a stunning resume for free with SwiftResume.io" />
+        <meta property="og:title" content="Free Resume Builder & Cover Letter Generator | SwiftResume.io" />
+        <meta property="og:description" content="Create a professional resume or cover letter for free with SwiftResume.io. ATS-friendly, modern, and easy to use." />
         <meta property="og:url" content="https://swiftresumeio.vercel.app/" />
         <meta property="og:type" content="website" />
       </head>
