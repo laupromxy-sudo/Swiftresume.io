@@ -4,20 +4,7 @@ import { store } from "lib/redux/store";
 import { ResumeForm } from "components/ResumeForm";
 import { Resume } from "components/Resume";
 import { useState } from "react";
-
-export const metadata = {
-  title: "Free Resume Builder | SwiftResume.io",
-  description: "Create a professional resume for free with SwiftResume.io. ATS-friendly, modern, and easy to use. Download free resume templates and examples.",
-  keywords: [
-    "resume builder",
-    "free resume template",
-    "resume generator",
-    "ATS resume",
-    "online resume",
-    "job application",
-    "SwiftResume.io"
-  ]
-};
+import Head from "next/head";
 
 function ThemeCustomizer({
   onChange,
@@ -100,7 +87,7 @@ function ThemeCustomizer({
   );
 }
 
-export default function Create() {
+export default function ResumeBuilderPage(props) {
   const [customizerOpen, setCustomizerOpen] = useState(false);
   const [theme, setTheme] = useState({
     pageColor: "#f8fafc",
@@ -109,36 +96,43 @@ export default function Create() {
     template: "modern",
   });
   return (
-    <Provider store={store}>
-      <main
-        className="relative h-full w-full overflow-hidden"
-        style={{
-          background: theme.pageColor,
-          color: theme.fontColor,
-          fontFamily: theme.fontFamily,
-        }}
-      >
-        <button
-          className="fixed bottom-8 right-8 z-50 bg-primary text-white rounded-full px-6 py-3 shadow-xl font-bold text-lg hover:scale-105 transition-transform"
-          onClick={() => setCustomizerOpen(true)}
+    <>
+      <Head>
+        <title>Free Resume Builder | SwiftResume.io</title>
+        <meta name="description" content="Create a professional resume for free with SwiftResume.io. ATS-friendly, modern, and easy to use. Download free resume templates and examples." />
+        <meta name="keywords" content="resume builder, free resume template, resume generator, ATS resume, online resume, job application, SwiftResume.io" />
+      </Head>
+      <Provider store={store}>
+        <main
+          className="relative h-full w-full overflow-hidden"
+          style={{
+            background: theme.pageColor,
+            color: theme.fontColor,
+            fontFamily: theme.fontFamily,
+          }}
         >
-          Customize
-        </button>
-        <ThemeCustomizer
-          open={customizerOpen}
-          setOpen={setCustomizerOpen}
-          theme={theme}
-          onChange={setTheme}
-        />
-        <div className={`grid grid-cols-3 md:grid-cols-6 ${theme.template}`}>
-          <div className="col-span-3">
-            <ResumeForm />
+          <button
+            className="fixed bottom-8 right-8 z-50 bg-primary text-white rounded-full px-6 py-3 shadow-xl font-bold text-lg hover:scale-105 transition-transform"
+            onClick={() => setCustomizerOpen(true)}
+          >
+            Customize
+          </button>
+          <ThemeCustomizer
+            open={customizerOpen}
+            setOpen={setCustomizerOpen}
+            theme={theme}
+            onChange={setTheme}
+          />
+          <div className={`grid grid-cols-3 md:grid-cols-6 ${theme.template}`}>
+            <div className="col-span-3">
+              <ResumeForm />
+            </div>
+            <div className="col-span-3">
+              <Resume />
+            </div>
           </div>
-          <div className="col-span-3">
-            <Resume />
-          </div>
-        </div>
-      </main>
-    </Provider>
+        </main>
+      </Provider>
+    </>
   );
 }
