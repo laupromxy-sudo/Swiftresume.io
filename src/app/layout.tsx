@@ -16,6 +16,25 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Structured data for SEO */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "SwiftResume.io",
+          "url": "https://swiftresumeio.vercel.app/",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://swiftresumeio.vercel.app/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }` }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "SwiftResume.io",
+          "url": "https://swiftresumeio.vercel.app/",
+          "logo": "https://swiftresumeio.vercel.app/logo.svg"
+        }` }} />
         {/* Google tag (gtag.js) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-TETB179Y91"></script>
         <script dangerouslySetInnerHTML={{ __html: `

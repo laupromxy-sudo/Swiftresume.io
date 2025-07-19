@@ -12,6 +12,31 @@ export default function Home() {
       <Features />
       <Testimonials />
       <QuestionsAndAnswers />
+      <section className="mt-16 max-w-2xl mx-auto">
+        <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+        <div className="mb-4">
+          <h3 className="font-semibold">What is a resume builder?</h3>
+          <p>A resume builder is an online tool that helps you create a professional resume quickly and easily, often with templates and formatting best practices built in.</p>
+        </div>
+        <div className="mb-4">
+          <h3 className="font-semibold">Is SwiftResume.io really free?</h3>
+          <p>Yes! SwiftResume.io is completely free to use, with no sign up required.</p>
+        </div>
+        <div className="mb-4">
+          <h3 className="font-semibold">Can I import my existing resume?</h3>
+          <p>Yes, you can import your existing resume PDF and update it with a modern design in seconds.</p>
+        </div>
+        <div className="mb-4">
+          <h3 className="font-semibold">Is my data private?</h3>
+          <p>Absolutely. All your data stays in your browser and is never sent to a server.</p>
+        </div>
+      </section>
+      <section className="mt-16 max-w-2xl mx-auto">
+        <h2 className="text-2xl font-bold mb-4">What Our Users Say</h2>
+        <blockquote className="border-l-4 pl-4 italic mb-4">“SwiftResume.io’s auto format feature is a great help to ensure consistent format.”<br /><span className="font-semibold">– Ms. Spiegel, Educator</span></blockquote>
+        <blockquote className="border-l-4 pl-4 italic mb-4">“I was invited to interview at top tech companies thanks to its slick yet professional resume design.”<br /><span className="font-semibold">– Santi, Software Engineer</span></blockquote>
+        <blockquote className="border-l-4 pl-4 italic">“Creating a professional resume on SwiftResume.io is so smooth and easy! It saves me so much time and headache.”<br /><span className="font-semibold">– Vivian, College Student</span></blockquote>
+      </section>
     </main>
   );
 }

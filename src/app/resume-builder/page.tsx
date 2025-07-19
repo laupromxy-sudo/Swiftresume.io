@@ -5,6 +5,20 @@ import { ResumeForm } from "components/ResumeForm";
 import { Resume } from "components/Resume";
 import { useState } from "react";
 
+export const metadata = {
+  title: "Free Resume Builder | SwiftResume.io",
+  description: "Create a professional resume for free with SwiftResume.io. ATS-friendly, modern, and easy to use. Download free resume templates and examples.",
+  keywords: [
+    "resume builder",
+    "free resume template",
+    "resume generator",
+    "ATS resume",
+    "online resume",
+    "job application",
+    "SwiftResume.io"
+  ]
+};
+
 function ThemeCustomizer({
   onChange,
   theme,
